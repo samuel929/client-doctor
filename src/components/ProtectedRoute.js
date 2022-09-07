@@ -13,7 +13,7 @@ function ProtectedRoute(props) {
      const getUser=async()=>{
           try{
            dispatch(showLoading())
-          const response=await axios.post('http://localhost:8800/api/user/get-user-info-bi-id',{token:localStorage.getItem('token')},{
+          const response=await axios.post('https://server-doctor-app.herokuapp.com/api/user/get-user-info-bi-id',{token:localStorage.getItem('token')},{
               headers:{
                   Authorization:`Bearer ${localStorage.getItem('token')}`
               }

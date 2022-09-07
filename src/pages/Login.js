@@ -12,7 +12,7 @@ function Login() {
 
     try{
       dispatch(showLoading())
-     const res=await axios.post('http://localhost:8800/api/user/login',values);
+     const res=await axios.post('https://server-doctor-app.herokuapp.com/api/user/login',values);
      dispatch(hideLoading())
      if(res.data.message === "login succesfully"){
          toast.success(res.data.message)

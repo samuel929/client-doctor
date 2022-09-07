@@ -13,7 +13,7 @@ function Appointments() {
   const getAppointmentsData = async () => {
     try {
       dispatch(showLoading());
-      const resposne = await axios.get("http://localhost:8800/api/user/get-appointments-by-user-id", {
+      const resposne = await axios.get("https://server-doctor-app.herokuapp.com/api/user/get-appointments-by-user-id", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

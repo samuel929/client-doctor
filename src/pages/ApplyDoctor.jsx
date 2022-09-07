@@ -16,7 +16,7 @@ function ApplyDoctor() {
     const onFinish=async(values)=>{
         try{
             dispatch(showLoading())
-           const res=await axios.post('http://localhost:8800/api/user/apply-doctor',{...values,userId:user._id,timings: [
+           const res=await axios.post('https://server-doctor-app.herokuapp.com/api/user/apply-doctor',{...values,userId:user._id,timings: [
             moment(values.timings[0]).format("HH:mm"),
             moment(values.timings[1]).format("HH:mm"),
           ],},{

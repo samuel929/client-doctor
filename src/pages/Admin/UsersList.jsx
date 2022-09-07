@@ -10,7 +10,7 @@ function UsersList() {
     const getUserData=async()=>{
        try{
         dispatch(showLoading())
-        const res=await axios.get('http://localhost:8800/api/admin/get-all-users',{
+        const res=await axios.get('https://server-doctor-app.herokuapp.com/api/admin/get-all-users',{
             headers:{
                 'Authorization':`Bearer ${localStorage.getItem("token")}`
             }

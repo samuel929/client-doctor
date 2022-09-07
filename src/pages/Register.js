@@ -12,7 +12,7 @@ function Register() {
 
     try{
       dispatch(showLoading())
-     const res=await axios.post('http://localhost:8800/api/user/register',values);
+     const res=await axios.post('https://server-doctor-app.herokuapp.com/api/user/register',values);
      dispatch(hideLoading())
      if(res.data === 'User created succesfully'){
          toast.success(res.data)
