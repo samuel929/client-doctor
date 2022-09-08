@@ -36,7 +36,7 @@ function DoctorsList() {
                     'Authorization':`Bearer ${localStorage.getItem("token")}`
                 }
             })
-            console.log(res)
+            console.log(res.data)
             dispatch(hideLoading())
             if(res.data.success){
                 getUserData()
