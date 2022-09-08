@@ -14,6 +14,7 @@ function ApplyDoctor() {
     const {user}=useSelector(state=>state.user)
     const dispatch=useDispatch()
     const onFinish=async(values)=>{
+      console.log(values)
         try{
             dispatch(showLoading())
            const res=await axios.post('https://server-doctor-app.herokuapp.com/api/user/apply-doctor',{...values,userId:user._id,timings: [
@@ -35,6 +36,7 @@ function ApplyDoctor() {
           }catch(err){
             dispatch(hideLoading())
              toast.error("Something went wrong")
+             console.log(err)
           }
     }
   return (
