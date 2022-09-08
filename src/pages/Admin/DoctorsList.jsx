@@ -31,7 +31,7 @@ function DoctorsList() {
      const changeDoctorStatus=async(record,status)=>{
         try{
             dispatch(showLoading())
-            const res=await axios.post('http://localhost:8800/api/admin/change-doctor-account-status',{doctorId:record._id, userId:record.userId,status:status},{
+            const res=await axios.post('https://server-doctor-app.herokuapp.com/api/admin/change-doctor-account-status',{doctorId:record._id, userId:record.userId,status:status},{
                 headers:{
                     'Authorization':`Bearer ${localStorage.getItem("token")}`
                 }
