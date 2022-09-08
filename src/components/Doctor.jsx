@@ -26,7 +26,7 @@ function Doctor({ doctor }) {
       </p>
       <p>
         <b>Timings : </b>
-        {moment(doctor.timings[0]).format("'LT'") } - {moment(doctor.timings[1]).format("'LT'") }
+        {doctor.timings[0] } - {doctor.timings[1]}
       </p>
     </div>
   );
