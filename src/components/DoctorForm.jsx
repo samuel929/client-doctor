@@ -42,7 +42,7 @@ function DoctorForm({onFinish, initivalValues}) {
         <Form.Item
           required
           label="Phone Number"
-          name="number"
+          name="phone"
           rules={[{ required: true }]}
         >
           <Input placeholder="Phone Number" />
